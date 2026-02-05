@@ -1,0 +1,13 @@
+name: privacy
+summary: Privacy-first browsing and communications
+packages:
+  - torbrowser-launcher
+  - openvpn
+  - wireguard
+  - network-manager-openvpn
+  - network-manager-wireguard
+  - gnupg
+  - veracrypt
+  - cryptsetup
+  - dnscrypt-proxy
+  - mat2

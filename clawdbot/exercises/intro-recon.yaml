@@ -1,0 +1,8 @@
+name: Intro to Recon
+difficulty: beginner
+requires:
+  - local-lab
+steps:
+  - "Identify the target IP range in the lab network"
+  - "Run a safe discovery scan using nmap"
+  - "Summarize results in the exercise log"
