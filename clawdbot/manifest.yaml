@@ -1,0 +1,17 @@
+name: Clawdbot
+version: 0.1.0
+summary: Guided cybersecurity training assistant for Mahakaal OS
+entrypoint: /usr/local/bin/clawdbot
+paths:
+  exercises: /opt/clawdbot/exercises
+  logs: ~/Mahakaal-Logs
+modules:
+  - id: recon
+    title: Reconnaissance fundamentals
+    difficulty: beginner
+  - id: web
+    title: Web application testing
+    difficulty: intermediate
+  - id: hardening
+    title: Blue-team hardening basics
+    difficulty: beginner

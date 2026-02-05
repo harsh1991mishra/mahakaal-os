@@ -1,0 +1,16 @@
+name: Exercise Name
+id: exercise-id
+difficulty: beginner
+estimated_time: 30m
+requires:
+  - local-lab
+objectives:
+  - "Describe the goal of the exercise"
+steps:
+  - "Step 1 description"
+  - "Step 2 description"
+checkpoints:
+  - "Checkpoint description"
+resources:
+  - title: Related tutorial
+    path: docs/tutorials/ethical-pentest.md

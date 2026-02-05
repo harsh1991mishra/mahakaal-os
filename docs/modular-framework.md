@@ -1,6 +1,8 @@
 # Modular Package Framework
 
-Mahakaal OS uses a lightweight profile system to make it easy to add or remove packages. Each profile is a simple list of packages with optional metadata. Build scripts translate profiles into `live-build` package lists.
+Mahakaal OS uses a lightweight profile system to make it easy to add or remove
+packages. Each profile is a simple list of packages with optional metadata.
+Build scripts translate profiles into `live-build` package lists.
 
 ## Profile format
 
@@ -37,7 +39,10 @@ packages:
 3. Rebuild the image using `live-build`.
 
 ```
-./scripts/build-image.sh --profiles core,privacy,pentest,vm-optimized
+./scripts/compose-packages.sh \
+  --profiles core,privacy,pentest,vm-optimized \
+  --output build/config/package-lists/mahakaal.list.chroot
 ```
 
-The build script merges the selected profile package lists into `config/package-lists/mahakaal.list.chroot` so `lb build` installs the desired packages.
+The compose script merges selected profiles, checks for duplicates, and produces
+`mahakaal.list.chroot` so `lb build` installs the desired packages.

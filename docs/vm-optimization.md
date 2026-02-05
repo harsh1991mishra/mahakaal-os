@@ -1,6 +1,7 @@
 # VM Optimization Guide
 
-Mahakaal OS is designed for safe experimentation in virtual machines. Apply the following defaults during image build or first boot.
+Mahakaal OS is designed for safe experimentation in virtual machines. Apply the
+following defaults during image build or first boot.
 
 ## Performance defaults
 
@@ -27,3 +28,6 @@ Mahakaal OS is designed for safe experimentation in virtual machines. Apply the 
 - Use host-only or NAT networking by default.
 - Provide a toggle to enable bridged networking only for advanced users.
 - Include warnings in Clawdbot and the welcome screen.
+
+For a checklist of defaults to apply at first boot, see
+`docs/vm-defaults.md`.

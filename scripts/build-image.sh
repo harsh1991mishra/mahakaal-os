@@ -36,8 +36,6 @@ if [[ -z "$profiles" ]]; then
   exit 1
 fi
 
-IFS="," read -r -a selected_profiles <<< "$profiles"
-
 workdir="$(pwd)/build"
 config_dir="$workdir/config"
 list_dir="$config_dir/package-lists"
@@ -46,22 +44,8 @@ rm -rf "$workdir"
 mkdir -p "$list_dir"
 
 merged_list="$list_dir/mahakaal.list.chroot"
-: > "$merged_list"
 
-for profile in "${selected_profiles[@]}"; do
-  profile_file="profiles/${profile}.yaml"
-  if [[ ! -f "$profile_file" ]]; then
-    echo "Missing profile: $profile_file" >&2
-    exit 1
-  fi
-
-  echo "# ${profile}" >> "$merged_list"
-  awk '/^  - /{print $2}' "$profile_file" >> "$merged_list"
-  echo "" >> "$merged_list"
-  echo "Added profile: $profile"
-done
-
-echo "Generated package list at $merged_list"
+./scripts/compose-packages.sh --profiles "$profiles" --output "$merged_list"
 
 echo ""
 echo "Next steps:"

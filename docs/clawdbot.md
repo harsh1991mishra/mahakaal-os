@@ -1,6 +1,8 @@
 # Clawdbot Assistant
 
-Clawdbot is a built-in assistant that guides users through cybersecurity exercises, providing step-by-step hints, safety warnings, and contextual explanations.
+Clawdbot is a built-in assistant that guides users through cybersecurity
+exercises, providing step-by-step hints, safety warnings, and contextual
+explanations.
 
 ## Design goals
 
@@ -18,7 +20,8 @@ Clawdbot is a built-in assistant that guides users through cybersecurity exercis
 
 ## Exercise packs
 
-Exercise packs live in `clawdbot/exercises/` and include metadata for difficulty, prerequisites, and safe lab requirements.
+Exercise packs live in `clawdbot/exercises/` and include metadata for
+difficulty, prerequisites, and safe lab requirements.
 
 ```
 name: Intro to Recon
@@ -30,6 +33,10 @@ steps:
   - "Run a safe discovery scan using nmap"
   - "Summarize results in the exercise log"
 ```
+
+## Implementation notes
+
+Refer to `docs/clawdbot-implementation.md` for runtime and packaging guidance.
 
 ## Integration points
 
