@@ -1,0 +1,13 @@
+name: core
+summary: Base Kali utilities and system essentials
+packages:
+  - kali-linux-core
+  - sudo
+  - curl
+  - wget
+  - git
+  - ca-certificates
+  - gnupg
+  - ufw
+  - openssh-client
+  - vim

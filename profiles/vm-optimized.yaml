@@ -1,0 +1,9 @@
+name: vm-optimized
+summary: Virtual machine drivers and performance defaults
+packages:
+  - open-vm-tools
+  - qemu-guest-agent
+  - spice-vdagent
+  - xfce4
+  - xfce4-goodies
+  - lightdm
