@@ -1,0 +1,16 @@
+# Tor configuration for Antigravity OS
+# /etc/tor/torrc
+
+Log notice syslog
+DataDirectory /var/lib/tor
+
+# SocksPort 9050
+# ControlPort 9051
+
+# Transparent Proxy (if you want to route everything through Tor eventually)
+# TransPort 9040
+# DNSPort 5353
+
+# Hidden Service for SSH (Optional)
+# HiddenServiceDir /var/lib/tor/ssh/
+# HiddenServicePort 22 127.0.0.1:22

@@ -1,0 +1,45 @@
+# Base System
+kali-linux-core
+kali-desktop-xfce
+kali-linux-default
+kali-tools-top10
+
+# OSINT Tools
+recon-ng
+maltego
+theharvester
+shodan
+spiderfoot
+sherlock
+photon
+
+# WiFi Hacking Tools
+aircrack-ng
+wireshark
+reaver
+wifite
+kismet
+fern-wifi-cracker
+pixiewps
+bully
+# Note: Fluxion and WiFi Pumpkin might need manual install via hooks if not in repo, but available in Kali
+wifi-pumpkin3
+
+# Anonymity & Security
+tor
+torsocks
+macchanger
+network-manager
+openvpn
+proxychains4
+
+# Dependencies commonly used
+git
+curl
+wget
+python3-pip
+python3-venv
+build-essential
+pciutils
+net-tools
+wireless-tools

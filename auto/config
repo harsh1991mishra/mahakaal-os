@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+    --distribution kali-rolling \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --updates chroot \
+    --mirror-bootstrap "http://http.kali.org/kali" \
+    --mirror-chroot "http://http.kali.org/kali" \
+    --mirror-binary "http://http.kali.org/kali" \
+    --mirror-binary-security "http://security.kali.org/kali-security" \
+    --binary-images iso-hybrid \
+    --memtest none \
+    "${@}"

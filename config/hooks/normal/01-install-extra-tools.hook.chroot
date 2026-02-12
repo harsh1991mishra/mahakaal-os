@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Install additional tools not in standard repositories
+# This script runs during the build process in the chroot environment
+
+# Create tools directory
+mkdir -p /opt/tools
+cd /opt/tools
+
+# Install Clawdbot (Assuming it's a git repo, if not, placeholder)
+# echo "Installing Clawdbot..."
+# git clone https://github.com/the-claw-project/clawdbot.git || echo "Clawdbot repo not found, skipping."
+
+# Install Arikon (Automated Recon)
+echo "Installing Arikon..."
+git clone https://github.com/santatic/arikon.git || echo "Arikon repo not found"
+
+# Install Creepy (Geolocation OSINT)
+# Note: Creepy is old and might be deprecated, installing dependencies helps
+apt-get install -y python3-qt5 python3-folium || true
+
+# Install Bulbasaur (if not in repo)
+# git clone https://github.com/example/bulbasaur.git
+
+# Install Fluxion
+echo "Installing Fluxion..."
+git clone https://www.github.com/FluxionNetwork/fluxion.git
+
+# Permissions
+chmod -R 755 /opt/tools
