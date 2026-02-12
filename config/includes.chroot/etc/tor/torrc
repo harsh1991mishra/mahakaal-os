@@ -1,4 +1,4 @@
-# Tor configuration for Antigravity OS
+# Tor configuration for Mahakaal OS
 # /etc/tor/torrc
 
 Log notice syslog

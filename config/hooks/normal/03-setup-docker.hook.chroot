@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Enable Docker service
+systemctl enable docker
+
+# Add user to docker group
+usermod -aG docker user || true

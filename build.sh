@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Build script for Antigravity OS
+# Build script for Mahakaal OS
 # Must be run as root on a Debian/Kali system
 
 if [ "$(id -u)" -ne 0 ]; then
@@ -19,7 +19,7 @@ lb clean
 lb config
 
 # Build
-echo "Starting build process for Antigravity OS..."
+echo "Starting build process for Mahakaal OS..."
 lb build
 
 echo "Build complete! Check the .iso file in this directory."

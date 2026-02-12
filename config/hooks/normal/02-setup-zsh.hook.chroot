@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Configure ZSH as default shell satisfying the "Mahakaal" aesthetic
+
+# Install Starship prompt (modern, fast)
+curl -sS https://starship.rs/install.sh | sh -s -- -y
+
+# Change default shell for user and root
+chsh -s /usr/bin/zsh root
+chsh -s /usr/bin/zsh user
+
+# Create ZSH config for global use
+cat <<EOF > /etc/zsh/zshrc
+# Enable Starship
+eval "\$(starship init zsh)"
+
+# Aliases
+alias ll='ls -la'
+alias update='sudo apt update && sudo apt full-upgrade -y'
+alias cls='clear'
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+EOF
+
+# Pre-configure Starship with a "Hacker" theme (Kali-like but custom)
+mkdir -p /etc/skel/.config
+cat <<EOF > /etc/skel/.config/starship.toml
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[username]
+style_user = "white bold"
+style_root = "black bold red"
+format = "[\$user]($style) "
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "on [\$hostname](bold yellow) "
+disabled = false
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = "🌱 "
+truncation_length = 4
+truncation_symbol = ""
+EOF

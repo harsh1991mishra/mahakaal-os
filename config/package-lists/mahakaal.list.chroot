@@ -43,3 +43,17 @@ build-essential
 pciutils
 net-tools
 wireless-tools
+
+# Aesthetic & Productivity
+zsh
+tmux
+neofetch
+cmatrix
+hollywood
+terminator
+fonts-powerline
+fonts-firacode
+
+# Containerization
+docker.io
+docker-compose

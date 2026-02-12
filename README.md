@@ -1,6 +1,6 @@
-# Antigravity OS
+# Mahakaal OS
 
-**Antigravity OS** is a custom Linux distribution designed for anonymity, OSINT (Open Source Intelligence), and penetration testing. It is built on top of Kali Linux/Debian using `live-build`.
+**Mahakaal OS** is a custom Linux distribution designed for anonymity, OSINT (Open Source Intelligence), and penetration testing. It is built on top of Kali Linux/Debian using `live-build`.
 
 ## Features
 
@@ -19,6 +19,12 @@ Pre-installed and configured tools for intelligence gathering:
 - **Sherlock**
 - **Photon**
 
+### 💻 Productivity & Aesthetics
+- **Shell**: ZSH with Starship prompt pre-configured.
+- **Terminal**: Terminator with powerline fonts.
+- **Docker**: Pre-installed and configured for containerized tools.
+- **Visuals**: `neofetch`, `cmatrix`, `hollywood` for the hacker aesthetic.
+
 ### 📡 WiFi Hacking Arsenal
 Full suite of tools for wireless auditing:
 - **Aircrack-ng**
@@ -34,7 +40,7 @@ Full suite of tools for wireless auditing:
 
 ## 🚀 How to Build
 
-To build the Antigravity OS ISO, you need a Debian-based system (Debian, Ubuntu, or Kali).
+To build the Mahakaal OS ISO, you need a Debian-based system (Debian, Ubuntu, or Kali).
 
 1.  **Clone this repository**:
     ```bash
