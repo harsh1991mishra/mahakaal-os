@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Mahakaal OS - GitHub Repository Sync Script
+# Usage: sync-my-repos [username]
+
+USERNAME=${1:-"harsh1991mishra"}
+TARGET_DIR="$HOME/Github/repos"
+
+echo -e "\e[1;36m[Mahakaal OS] Starting GitHub Repository Sync for user: $USERNAME\e[0m"
+
+# Check for gh cli
+if ! command -v gh &> /dev/null; then
+    echo -e "\e[1;31mError: GitHub CLI (gh) is not installed.\e[0m"
+    echo "Please install it with: sudo apt install gh"
+    exit 1
+fi
+
+# Check authentication
+if ! gh auth status &> /dev/null; then
+    echo -e "\e[1;33mWarning: You are not logged in to GitHub.\e[0m"
+    echo "Please run 'gh auth login' to authenticate, then run this script again."
+    exit 1
+fi
+
+# Create target directory
+mkdir -p "$TARGET_DIR"
+cd "$TARGET_DIR"
+
+echo -e "\e[1;32mFetching repository list...\e[0m"
+
+# Fetch repos (limit 1000)
+gh repo list "$USERNAME" --limit 1000 --json name,cloneUrl --template '{{range .}}{{printf "%s|%s\n" .name .cloneUrl}}{{end}}' | while IFS='|' read -r name url; do
+    if [ -d "$name" ]; then
+        echo -e "\e[1;33mSyncing $name...\e[0m"
+        (cd "$name" && git pull)
+    else
+        echo -e "\e[1;32mCloning $name...\e[0m"
+        git clone "$url"
+    fi
+done
+
+echo -e "\e[1;36m[Mahakaal OS] All repositories synced to $TARGET_DIR\e[0m"

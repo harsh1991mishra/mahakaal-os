@@ -24,6 +24,7 @@ Pre-installed and configured tools for intelligence gathering:
 - **Terminal**: Terminator with powerline fonts.
 - **Docker**: Pre-installed and configured for containerized tools.
 - **Visuals**: `neofetch`, `cmatrix`, `hollywood` for the hacker aesthetic.
+- **GitHub Sync**: `sync-my-repos` script to auto-clone all your repositories.
 
 ### 📡 WiFi Hacking Arsenal
 Full suite of tools for wireless auditing:

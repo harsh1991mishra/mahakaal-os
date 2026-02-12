@@ -43,6 +43,7 @@ build-essential
 pciutils
 net-tools
 wireless-tools
+gh
 
 # Aesthetic & Productivity
 zsh
