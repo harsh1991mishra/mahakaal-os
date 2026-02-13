@@ -44,6 +44,7 @@ pciutils
 net-tools
 wireless-tools
 gh
+jq
 
 # Aesthetic & Productivity
 zsh
