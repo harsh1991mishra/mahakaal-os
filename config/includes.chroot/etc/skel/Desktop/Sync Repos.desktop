@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Sync Repos
+Comment=Download all your GitHub repositories
+Exec=terminator -e "sync-my-repos; read -p 'Press Enter to close...'"
+Icon=utilities-terminal
+Path=
+Terminal=false
+StartupNotify=false

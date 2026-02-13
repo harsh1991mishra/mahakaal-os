@@ -26,6 +26,9 @@ Pre-installed and configured tools for intelligence gathering:
 - **Visuals**: `neofetch`, `cmatrix`, `hollywood` for the hacker aesthetic.
 - **GitHub Sync**: `sync-my-repos` script to auto-clone all your repositories.
 
+### 📂 Included Repositories (Preview)
+*See `REPOSITORIES.md` for full list or run `sync-my-repos` to download.*
+
 ### 📡 WiFi Hacking Arsenal
 Full suite of tools for wireless auditing:
 - **Aircrack-ng**
